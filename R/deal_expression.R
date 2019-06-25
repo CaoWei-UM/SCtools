@@ -18,3 +18,11 @@ top_expression_cell_list<-function(gene_list,seurat,top=3){
   }
   return(cell_list)
 }
+
+AddUMAP<-function(mutation,seurat,force_replace=F){
+  cell_name<-mutation$col.attrs$cell_names[]
+  UMAP_dim<-as.data.frame(seurat@dr$umap@cell.embeddings[cell_name,])
+  AddCellAttr(mutation,'UMAP1',UMAP_dim$UMAP1,force_replace=force_replace)
+  AddCellAttr(mutation,'UMAP2',UMAP_dim$UMAP2,force_replace=force_replace)
+  return(mutation)
+}
