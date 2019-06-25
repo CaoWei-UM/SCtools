@@ -1,0 +1,9 @@
+Package: SCtools
+Title: a R package use loom format deal single cell mutation profile
+Version: 0.2.0
+Authors@R: person("Wei", "Cao", email = "caow@mail.sustech.edu.cn", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends: R (>= 3.5.1)
+License: MIT
+Encoding: UTF-8
+LazyData: true
